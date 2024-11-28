@@ -9,7 +9,7 @@ import java.util.List;
  * access to the list of cities and ensures that only one instance of the repository exists
  * throughout the application. This class loads and stores default city data in memory.
  */
-public class CityRepository {
+public final class CityRepository {
     private static CityRepository instance;
     private final List<City> dataBase;
 
