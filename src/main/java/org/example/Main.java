@@ -1,11 +1,14 @@
 package org.example;
 
+import org.example.сity.transportation.network.CityService;
+
 import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 //        task1FindCorrectNumberBracketsExpressions();
+        task2CityTransportationNetworkMinimumCostPathCalculation();
 //        task3CalculateFactorialThenCalculateSumOfDigitsOfNumberOfFactorial(100);
     }
 
@@ -33,8 +36,14 @@ public class Main {
                 + calculateBracketByCatalanFormula(n));
     }
 
+    public static void task2CityTransportationNetworkMinimumCostPathCalculation() {
+        CityService.findMinCostBetweenCities("gdansk", "warszawa");
+        CityService.findMinCostBetweenCities("bydgoszcz", "warszawa");
+    }
+
     /**
-     *      Find the sum of the digits in the number 100! (i.e. 100 factorial)         {Correct answer: 648}
+     *      Find the sum of the digits in the number 100! (i.e. 100 factorial)
+     *      {Correct answer: 648}
      */
     public static void task3CalculateFactorialThenCalculateSumOfDigitsOfNumberOfFactorial(int n) {
         System.out.println("\nTask 3\nSum fo digits of factorial of number " + n + " is: " +
