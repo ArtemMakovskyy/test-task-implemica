@@ -50,7 +50,7 @@ public class Main {
      * @param number The number to calculate the sum of digits for
      * @return The sum of digits of the number
      */
-    private static int calculateSumOfDigitsOfNumber(BigInteger number) {
+    public static int calculateSumOfDigitsOfNumber(BigInteger number) {
         // Convert the number to a string and calculate the sum of its digits
         return number.toString()
                 .chars() // Get the stream of characters
@@ -65,7 +65,7 @@ public class Main {
      * @param n Number of bracket pairs
      * @return The number of correct bracket expressions
      */
-    private static BigInteger calculateBracketByCatalanFormula(int n) {
+    public static BigInteger calculateBracketByCatalanFormula(int n) {
         return calculateFactorial(2 * n)
                 .divide(calculateFactorial(n + 1)
                         .multiply(calculateFactorial(n)));
@@ -77,7 +77,7 @@ public class Main {
      * @param n The number to calculate the factorial for
      * @return The factorial of n
      */
-    private static BigInteger calculateFactorial(int n) {
+    public static BigInteger calculateFactorial(int n) {
         if (n == 0 || n == 1) {
             return BigInteger.ONE;
         }
