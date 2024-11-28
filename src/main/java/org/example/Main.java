@@ -1,15 +1,15 @@
 package org.example;
 
-import org.example.сity.transportation.network.CityService;
-
 import java.math.BigInteger;
 import java.util.Scanner;
 
+import static org.example.сity.transportation.network.CityService.findMinCostBetweenCities;
+
 public class Main {
     public static void main(String[] args) {
-//        task1FindCorrectNumberBracketsExpressions();
+        task1FindCorrectNumberBracketsExpressions();
         task2CityTransportationNetworkMinimumCostPathCalculation();
-//        task3CalculateFactorialThenCalculateSumOfDigitsOfNumberOfFactorial(100);
+        task3CalculateFactorialThenCalculateSumOfDigitsOfNumberOfFactorial(100);
     }
 
     /**
@@ -37,8 +37,9 @@ public class Main {
     }
 
     public static void task2CityTransportationNetworkMinimumCostPathCalculation() {
-        CityService.findMinCostBetweenCities("gdansk", "warszawa");
-        CityService.findMinCostBetweenCities("bydgoszcz", "warszawa");
+        System.out.println("\nTask 2");
+        System.out.println(findMinCostBetweenCities("gdansk", "warszawa"));
+        System.out.println(findMinCostBetweenCities("bydgoszcz", "warszawa"));
     }
 
     /**

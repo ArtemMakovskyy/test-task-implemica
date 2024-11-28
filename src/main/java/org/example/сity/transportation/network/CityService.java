@@ -6,18 +6,28 @@ import java.util.List;
 public class CityService {
     private final static List<City> cities
             = CityRepository.getInstance().getAllCities();
-
     /**
      * Finds and prints the minimum travel cost between two cities.
      *
      * @param fromCity the name of the starting city.
      * @param toCity the name of the destination city.
      */
-    public static void findMinCostBetweenCities(String fromCity, String toCity) {
+    public static String findMinCostBetweenCities(
+            String fromCity,
+            String toCity)
+    {
         City startCity = findCityByName(cities, fromCity);
         City endCity = findCityByName(cities, toCity);
-        int minCost = findMinCostBetweenCities(startCity, endCity, new ArrayList<>(), 0, cities);
-        System.out.println("Minimum cost fromCity " + startCity.getName() + " toCity " + endCity.getName() + " is: " + minCost);
+        int minCost = findMinCostBetweenCities(
+                startCity,
+                endCity,
+                new ArrayList<>(),
+                0,
+                cities);
+        return "Minimum cost fromCity "
+                + startCity.getName()
+                + " toCity " + endCity.getName()
+                + " is: " + minCost;
     }
 
     /**
